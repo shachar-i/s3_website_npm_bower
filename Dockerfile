@@ -10,3 +10,8 @@ ENV PATH $PATH:/nodejs/bin
 
 # Install bower
 RUN npm install -g bower
+
+# Configure for s3_website usage
+#
+# credit: https://hub.docker.com/r/attensee/s3_website/~/dockerfile/
+ENTRYPOINT ["s3_website"]
